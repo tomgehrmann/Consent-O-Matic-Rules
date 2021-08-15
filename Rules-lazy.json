@@ -1,0 +1,321 @@
+{
+    "Amazon-lazy": {
+        "detectors": [
+            {
+                "presentMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": "#sp-cc, #savePrefs"
+                    }
+                },
+                "showingMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": "#sp-cc, #savePrefs"
+                    }
+                }
+            }
+        ],
+        "methods": [
+            {
+                "name": "HIDE_CMP"
+            },
+            {
+                "action": {
+                    "type": "click",
+                    "target": {
+                        "selector": "#sp-cc-customize"
+                    }
+                },
+                "name": "OPEN_OPTIONS"
+            },
+            {
+                "name": "DO_CONSENT"
+            },
+            {
+                "action": {
+                    "type": "list",
+                    "actions": [
+                        {
+                            "type": "click",
+                            "target": {
+                                "selector": ".a-button-input"
+                            },
+                            "parent": {
+                                "selector": "#savePrefs"
+                            }
+                        }
+                    ]
+                },
+                "name": "SAVE_CONSENT"
+            }
+        ]
+    },
+	"CHECK24-lazy": {
+        "detectors": [
+            {
+                "presentMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": ".c24-cookie-consent-wrapper"
+                    }
+                },
+                "showingMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": ".c24-cookie-consent-wrapper",
+                        "displayFilter": true
+                    }
+                }
+            }
+        ],
+        "methods": [
+            {
+                "name": "HIDE_CMP"
+            },
+            {
+                "action": {
+                    "type": "click",
+                    "target": {
+                        "selector": ".c24-cookie-consent-button-secondary"
+                    }
+                },
+                "name": "OPEN_OPTIONS"
+            },
+            {
+                "name": "DO_CONSENT"
+            },
+            {
+                "action": {
+                    "type": "click",
+                    "target": {
+                        "selector": ".c24-cookie-consent-buttonlink"
+                    }
+                },
+                "name": "SAVE_CONSENT"
+            }
+        ]
+    },
+	"SSKDuesseldorf-lazy-noclose": {
+        "detectors": [
+            {
+                "presentMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": ".if6_outer.if6_eprivacy.initial"
+                    }
+                },
+                "showingMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": ".if6_outer.if6_eprivacy.initial"
+                    }
+                }
+            }
+        ],
+        "methods": [
+            {
+                "name": "HIDE_CMP"
+            },
+            {
+                "action": {
+                    "type": "list",
+                    "actions": [
+                        {
+                            "type": "click",
+                            "target": {
+                                "selector": "[href=\"/content/myif/ssk-duesseldorf/work/filiale/de/home/misc/eprivacy/_jcr_content.bin\"]"
+                            }
+                        },
+                        {
+                            "type": "click",
+                            "target": {
+                                "selector": "[href=\"/de/home/toolbar/datenschutz.html#optin\"]"
+                            },
+                            "openInTab": true
+                        }
+                    ]
+                },
+                "name": "OPEN_OPTIONS"
+            },
+            {
+                "name": "DO_CONSENT"
+            },
+            {
+                "action": {
+                    "type": "list",
+                    "actions": [
+                        {
+                            "type": "click",
+                            "target": {
+                                "selector": "[name=\"ePOptInSubmit\"]"
+                            },
+                            "parent": {
+                                "selector": "#optin"
+                            }
+                        }
+                    ]
+                },
+                "name": "SAVE_CONSENT"
+            }
+        ]
+    },
+	"Stadtwerke Düsseldorf-lazy": {
+        "detectors": [
+            {
+                "presentMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": "#usercentrics-button"
+                    }
+                },
+                "showingMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": "#uc-banner-centered"
+                    }
+                }
+            }
+        ],
+        "methods": [
+            {
+                "name": "HIDE_CMP"
+            },
+            {
+                "name": "OPEN_OPTIONS"
+            },
+            {
+                "name": "DO_CONSENT"
+            },
+            {
+                "action": {
+                    "type": "click",
+                    "target": {
+                        "selector": "[href=\"#uc-deny-all-consents-and-close-initial-view\"]"
+                    },
+                    "parent": {
+                        "selector": "#uc-full-optin-description"
+                    }
+                },
+                "name": "SAVE_CONSENT"
+            }
+        ]
+    },
+	"Thalia-lazy": {
+        "detectors": [
+            {
+                "presentMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": ".consent-banner-box"
+                    }
+                },
+                "showingMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": ".consent-banner-box"
+                    }
+                }
+            }
+        ],
+        "methods": [
+            {
+                "name": "HIDE_CMP"
+            },
+            {
+                "name": "OPEN_OPTIONS"
+            },
+            {
+                "name": "DO_CONSENT"
+            },
+            {
+                "action": {
+                    "type": "click",
+                    "target": {
+                        "selector": ".element-link-standard.link-soft"
+                    },
+                    "parent": {
+                        "selector": ".banner-aktionen"
+                    }
+                },
+                "name": "SAVE_CONSENT"
+            }
+        ]
+    },
+	"Weltbild-lazy": {
+        "detectors": [
+            {
+                "presentMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": ".dsgvolayer"
+                    }
+                },
+                "showingMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": ".dsgvolayer"
+                    }
+                }
+            }
+        ],
+        "methods": [
+            {
+                "name": "HIDE_CMP"
+            },
+            {
+                "name": "OPEN_OPTIONS"
+            },
+            {
+                "name": "DO_CONSENT"
+            },
+            {
+                "action": {
+                    "type": "click",
+                    "target": {
+                        "selector": ".dsgvoButton"
+                    }
+                },
+                "name": "SAVE_CONSENT"
+            }
+        ]
+    },
+	"reddit-lazy": {
+        "detectors": [
+            {
+                "presentMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": "._3q-XSJ2vokDQrvdG6mR__k"
+                    }
+                },
+                "showingMatcher": {
+                    "type": "css",
+                    "target": {
+                        "selector": "._3q-XSJ2vokDQrvdG6mR__k"
+                    }
+                }
+            }
+        ],
+        "methods": [
+            {
+                "name": "HIDE_CMP"
+            },
+            {
+                "name": "OPEN_OPTIONS"
+            },
+            {
+                "name": "DO_CONSENT"
+            },
+            {
+                "action": {
+                    "type": "click",
+                    "target": {
+                        "selector": "._1tI68pPnLBjR1iHcL7vsee._2iuoyPiKHN3kfOoeIQalDT._10BQ7pjWbeYP63SAPNS8Ts.HNozj_dKjQZ59ZsfEegz8 "
+                    }
+                },
+                "name": "SAVE_CONSENT"
+            }
+        ]
+    }
+}
