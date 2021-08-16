@@ -4,6 +4,7 @@ Custom rules for Consent-O-Matic. Most of them are lazy i.e. just accept functio
 Supported sites:
 * Amazon
 * CHECK24
+* FitX
 * Sparkasse
 * Stadtwerke Düsseldorf
 * Thalia
