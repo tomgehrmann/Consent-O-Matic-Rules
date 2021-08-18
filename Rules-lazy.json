@@ -1,57 +1,5 @@
 {
-    "Amazon-lazy": {
-        "detectors": [
-            {
-                "presentMatcher": {
-                    "type": "css",
-                    "target": {
-                        "selector": "#sp-cc, #savePrefs"
-                    }
-                },
-                "showingMatcher": {
-                    "type": "css",
-                    "target": {
-                        "selector": "#sp-cc, #savePrefs"
-                    }
-                }
-            }
-        ],
-        "methods": [
-            {
-                "name": "HIDE_CMP"
-            },
-            {
-                "action": {
-                    "type": "click",
-                    "target": {
-                        "selector": "#sp-cc-customize"
-                    }
-                },
-                "name": "OPEN_OPTIONS"
-            },
-            {
-                "name": "DO_CONSENT"
-            },
-            {
-                "action": {
-                    "type": "list",
-                    "actions": [
-                        {
-                            "type": "click",
-                            "target": {
-                                "selector": ".a-button-input"
-                            },
-                            "parent": {
-                                "selector": "#savePrefs"
-                            }
-                        }
-                    ]
-                },
-                "name": "SAVE_CONSENT"
-            }
-        ]
-    },
-	"CHECK24-lazy": {
+    "CHECK24-lazy": {
         "detectors": [
             {
                 "presentMatcher": {
@@ -96,7 +44,7 @@
             }
         ]
     },
-	"SSKDuesseldorf-lazy-noclose": {
+    "SSKDuesseldorf-lazy-noclose": {
         "detectors": [
             {
                 "presentMatcher": {
@@ -160,7 +108,7 @@
             }
         ]
     },
-	"Stadtwerke Düsseldorf-lazy": {
+    "Stadtwerke Düsseldorf-lazy": {
         "detectors": [
             {
                 "presentMatcher": {
@@ -201,7 +149,7 @@
             }
         ]
     },
-	"Thalia-lazy": {
+    "Thalia-lazy": {
         "detectors": [
             {
                 "presentMatcher": {
@@ -242,7 +190,7 @@
             }
         ]
     },
-	"Weltbild-lazy": {
+    "Weltbild-lazy": {
         "detectors": [
             {
                 "presentMatcher": {
@@ -280,7 +228,7 @@
             }
         ]
     },
-	"reddit-lazy": {
+    "reddit-lazy": {
         "detectors": [
             {
                 "presentMatcher": {
@@ -318,7 +266,7 @@
             }
         ]
     },
-	"fitx-lazy": {
+    "fitx-lazy": {
 	"detectors": [
 	    {
 		"presentMatcher": {
