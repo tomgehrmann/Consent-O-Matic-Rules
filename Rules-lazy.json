@@ -44,21 +44,25 @@
             }
         ]
     },
-    "SSKDuesseldorf-lazy-noclose": {
+    "SSKDuesseldorf-lazy": {
         "detectors": [
             {
-                "presentMatcher": {
-                    "type": "css",
-                    "target": {
-                        "selector": ".if6_outer.if6_eprivacy.initial"
+                "presentMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "selector": ".if6_outer.if6_eprivacy.initial"
+                        }
                     }
-                },
-                "showingMatcher": {
-                    "type": "css",
-                    "target": {
-                        "selector": ".if6_outer.if6_eprivacy.initial"
+                ],
+                "showingMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "selector": ".if6_outer.if6_eprivacy.initial"
+                        }
                     }
-                }
+                ]
             }
         ],
         "methods": [
@@ -66,45 +70,25 @@
                 "name": "HIDE_CMP"
             },
             {
-                "action": {
-                    "type": "list",
-                    "actions": [
-                        {
-                            "type": "click",
-                            "target": {
-                                "selector": "[href=\"/content/myif/ssk-duesseldorf/work/filiale/de/home/misc/eprivacy/_jcr_content.bin\"]"
-                            }
-                        },
-                        {
-                            "type": "click",
-                            "target": {
-                                "selector": "[href=\"/de/home/toolbar/datenschutz.html#optin\"]"
-                            },
-                            "openInTab": true
-                        }
-                    ]
-                },
                 "name": "OPEN_OPTIONS"
             },
             {
+                "action": {
+                    "type": "click",
+                    "target": {
+                        "selector": "a[data-form=\".eprivacy_optin_decline\"]"
+                    },
+                    "parent": {
+                        "selector": ".ebutton"
+                    }
+                },
                 "name": "DO_CONSENT"
             },
             {
-                "action": {
-                    "type": "list",
-                    "actions": [
-                        {
-                            "type": "click",
-                            "target": {
-                                "selector": "[name=\"ePOptInSubmit\"]"
-                            },
-                            "parent": {
-                                "selector": "#optin"
-                            }
-                        }
-                    ]
-                },
                 "name": "SAVE_CONSENT"
+            },
+            {
+                "name": "UTILITY"
             }
         ]
     },
