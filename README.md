@@ -8,4 +8,4 @@ Supported sites:
 * Stadtwerke Düsseldorf
 * Thalia
 * Weltbild
-* reddit
+* reddit (German)
