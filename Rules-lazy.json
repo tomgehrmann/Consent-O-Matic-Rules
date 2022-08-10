@@ -44,7 +44,7 @@
             }
         ]
     },
-    "SSKDuesseldorf-lazy": {
+    "SSKDuesseldorf": {
         "detectors": [
             {
                 "presentMatcher": [
@@ -74,12 +74,24 @@
             },
             {
                 "action": {
-                    "type": "click",
-                    "target": {
-                        "selector": "a[data-form=\".eprivacy_optin_decline\"]"
+                    "type": "ifallowall",
+                    "trueAction": {
+                        "type": "click",
+                        "target": {
+                            "selector": "a[data-form=\".eprivacy_optin_accept\"]"
+                        },
+                        "parent": {
+                            "selector": ".ebutton"
+                        }
                     },
-                    "parent": {
-                        "selector": ".ebutton"
+                    "falseAction": {
+                        "type": "click",
+                        "target": {
+                            "selector": "a[data-form=\".eprivacy_optin_decline\"]"
+                        },
+                        "parent": {
+                            "selector": ".ebutton"
+                        }
                     }
                 },
                 "name": "DO_CONSENT"
