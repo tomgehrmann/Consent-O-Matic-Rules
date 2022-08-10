@@ -197,21 +197,25 @@
             }
         ]
     },
-    "Thalia-lazy": {
+    "Thalia": {
         "detectors": [
             {
-                "presentMatcher": {
-                    "type": "css",
-                    "target": {
-                        "selector": ".consent-banner-box"
+                "presentMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "selector": ".consent-banner-box"
+                        }
                     }
-                },
-                "showingMatcher": {
-                    "type": "css",
-                    "target": {
-                        "selector": ".consent-banner-box"
+                ],
+                "showingMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "selector": ".consent-banner-box"
+                        }
                     }
-                }
+                ]
             }
         ],
         "methods": [
@@ -222,19 +226,34 @@
                 "name": "OPEN_OPTIONS"
             },
             {
+                "action": {
+                    "type": "ifallowall",
+                    "trueAction": {
+                        "type": "click",
+                        "target": {
+                            "selector": "button[data-consent=\"agree\"]"
+                        },
+                        "parent": {
+                            "selector": ".consent-banner-box"
+                        }
+                    },
+                    "falseAction": {
+                        "type": "click",
+                        "target": {
+                            "selector": "button[data-consent=\"disagree\"]"
+                        },
+                        "parent": {
+                            "selector": ".consent-banner-box"
+                        }
+                    }
+                },
                 "name": "DO_CONSENT"
             },
             {
-                "action": {
-                    "type": "click",
-                    "target": {
-                        "selector": ".element-link-standard.link-soft"
-                    },
-                    "parent": {
-                        "selector": ".banner-aktionen"
-                    }
-                },
                 "name": "SAVE_CONSENT"
+            },
+            {
+                "name": "UTILITY"
             }
         ]
     },
