@@ -295,21 +295,26 @@
             }
         ]
     },
-    "reddit-lazy": {
+    "reddit-german": {
         "detectors": [
             {
-                "presentMatcher": {
-                    "type": "css",
-                    "target": {
-                        "selector": "._3q-XSJ2vokDQrvdG6mR__k"
+                "presentMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "selector": "section a[href=\"https://www.redditinc.com/policies/cookie-notice\"]"
+                        }
                     }
-                },
-                "showingMatcher": {
-                    "type": "css",
-                    "target": {
-                        "selector": "._3q-XSJ2vokDQrvdG6mR__k"
+                ],
+                "showingMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "selector": "section a[href=\"https://www.redditinc.com/policies/cookie-notice\"]",
+                            "displayFilter": true
+                        }
                     }
-                }
+                ]
             }
         ],
         "methods": [
@@ -320,16 +325,50 @@
                 "name": "OPEN_OPTIONS"
             },
             {
+                "action": {
+                    "type": "ifallowall",
+                    "trueAction": {
+                        "type": "click",
+                        "target": {
+                            "selector": "button",
+                            "textFilter": [
+                                "Alle akzeptieren"
+                            ]
+                        },
+                        "parent": {
+                            "childFilter": {
+                                "target": {
+                                    "selector": "a[href=\"https://www.redditinc.com/policies/cookie-notice\"]"
+                                }
+                            },
+                            "selector": "section"
+                        }
+                    },
+                    "falseAction": {
+                        "type": "click",
+                        "target": {
+                            "selector": "button",
+                            "textFilter": [
+                                "Nicht-essentielle ablehnen"
+                            ]
+                        },
+                        "parent": {
+                            "childFilter": {
+                                "target": {
+                                    "selector": "a[href=\"https://www.redditinc.com/policies/cookie-notice\"]"
+                                }
+                            },
+                            "selector": "section"
+                        }
+                    }
+                },
                 "name": "DO_CONSENT"
             },
             {
-                "action": {
-                    "type": "click",
-                    "target": {
-                        "selector": "._1tI68pPnLBjR1iHcL7vsee._2iuoyPiKHN3kfOoeIQalDT._10BQ7pjWbeYP63SAPNS8Ts.HNozj_dKjQZ59ZsfEegz8 "
-                    }
-                },
                 "name": "SAVE_CONSENT"
+            },
+            {
+                "name": "UTILITY"
             }
         ]
     },
