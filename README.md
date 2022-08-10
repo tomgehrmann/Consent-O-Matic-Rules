@@ -7,5 +7,4 @@ Supported sites:
 * Sparkasse
 * Stadtwerke Düsseldorf
 * Thalia
-* Weltbild
 * reddit (German)
