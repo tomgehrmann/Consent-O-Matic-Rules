@@ -314,42 +314,69 @@
             }
         ]
     },
-    "fitx-lazy": {
-	"detectors": [
-	    {
-		"presentMatcher": {
-		    "type": "css",
-		    "target": {
-			"selector": ".jsx-3389166278.bar"
-		    }
-		},
-		"showingMatcher": {
-		    "type": "css",
-		    "target": {
-			"selector": ".jsx-3389166278.bar.shown"
-		    }
-		}
-	    }
-	],
-	"methods": [
-	    {
-		"name": "HIDE_CMP"
-	    },
-	    {
-		"name": "OPEN_OPTIONS"
-	    },
-	    {
-		"name": "DO_CONSENT"
-	    },
-	    {
-		"action": {
-		    "type": "click",
-		    "target": {
-			"selector": "span.jsx-3389166278.confirm"
-		    }
-		},
-		"name": "SAVE_CONSENT"
-	    }
-	]
+    "fitx": {
+        "detectors": [
+            {
+                "presentMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "selector": ".jsx-3456158015.bar"
+                        }
+                    }
+                ],
+                "showingMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "selector": ".jsx-3456158015.bar.shown"
+                        }
+                    }
+                ]
+            }
+        ],
+        "methods": [
+            {
+                "name": "HIDE_CMP"
+            },
+            {
+                "name": "OPEN_OPTIONS"
+            },
+            {
+                "action": {
+                    "type": "consent",
+                    "consents": [
+                        {
+                            "trueAction": {
+                                "type": "click",
+                                "target": {
+                                    "selector": ".jsx-3456158015.btn",
+                                    "textFilter": [
+                                        "akzeptieren"
+                                    ]
+                                }
+                            },
+                            "falseAction": {
+                                "type": "click",
+                                "target": {
+                                    "selector": ".jsx-3456158015.btn",
+                                    "textFilter": [
+                                        "Statistik-Cookies ablehnen"
+                                    ]
+                                }
+                            },
+                            "type": "B"
+                        }
+                    ]
+                },
+                "name": "DO_CONSENT"
+            },
+            {
+                "name": "SAVE_CONSENT"
+            },
+            {
+                "name": "UTILITY"
+            }
+        ]
     }
 }
