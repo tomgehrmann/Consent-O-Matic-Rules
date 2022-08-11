@@ -156,47 +156,6 @@
             }
         ]
     },
-    "Stadtwerke Düsseldorf-lazy": {
-        "detectors": [
-            {
-                "presentMatcher": {
-                    "type": "css",
-                    "target": {
-                        "selector": "#usercentrics-button"
-                    }
-                },
-                "showingMatcher": {
-                    "type": "css",
-                    "target": {
-                        "selector": "#uc-banner-centered"
-                    }
-                }
-            }
-        ],
-        "methods": [
-            {
-                "name": "HIDE_CMP"
-            },
-            {
-                "name": "OPEN_OPTIONS"
-            },
-            {
-                "name": "DO_CONSENT"
-            },
-            {
-                "action": {
-                    "type": "click",
-                    "target": {
-                        "selector": "[href=\"#uc-deny-all-consents-and-close-initial-view\"]"
-                    },
-                    "parent": {
-                        "selector": "#uc-full-optin-description"
-                    }
-                },
-                "name": "SAVE_CONSENT"
-            }
-        ]
-    },
     "Thalia": {
         "detectors": [
             {
