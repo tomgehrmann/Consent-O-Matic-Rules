@@ -365,7 +365,7 @@
                     {
                         "type": "css",
                         "target": {
-                            "selector": ".cookiePopup.reveal"
+                            "selector": "div[id=\"cookiePopup\"]"
                         }
                     }
                 ],
@@ -373,11 +373,7 @@
                     {
                         "type": "css",
                         "target": {
-                            "selector": ".cookiePopup.reveal"
-                        },
-                        "parent": {
-                            "selector": ".reveal-overlay",
-                            "displayFilter": true
+                            "selector": "div[id=\"cookiePopup\"]"
                         }
                     }
                 ]
@@ -398,13 +394,19 @@
                             "matcher": {
                                 "type": "checkbox",
                                 "target": {
-                                    "selector": "input[id=\"#cookiePopupCheck2\"]"
+                                    "selector": "input[id=\"cookiePopupCheck2\"]"
+                                },
+                                "parent": {
+                                    "selector": "div[id=\"cookiePopup\"]"
                                 }
                             },
                             "toggleAction": {
                                 "type": "click",
                                 "target": {
-                                    "selector": "input[id=\"#cookiePopupCheck2\"]"
+                                    "selector": "input[id=\"cookiePopupCheck2\"]"
+                                },
+                                "parent": {
+                                    "selector": "div[id=\"cookiePopup\"]"
                                 }
                             },
                             "type": "B"
@@ -417,7 +419,7 @@
                 "action": {
                     "type": "click",
                     "target": {
-                        "selector": ".button.privacyAcceptChoice"
+                        "selector": ".btn.privacyAcceptChoice"
                     }
                 },
                 "name": "SAVE_CONSENT"
